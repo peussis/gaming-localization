@@ -176,7 +176,7 @@
         <h2 style="font-size: 2rem; margin-top: 0;">Get Your Free Quote</h2>
         <p style="color: var(--text-dim); margin-bottom: 40px;">Includes a 100-word free sample of your actual script.</p>
 
-        <form action="https://formspree.io/f/mzddwypq" method="POST">
+        <form id="my-form" action="https://formspree.io/f/mzddwypq" method="POST">
             <input type="hidden" name="_next" value="https://peussis.github.io/gaming-localization/thanks.html">
             
             <div class="form-grid">
@@ -210,9 +210,34 @@
         </form>
     </section>
 </div>
-
+<script>
+  var form = document.getElementById("my-form");
+  
+  async function handleSubmit(event) {
+    event.preventDefault();
+    var data = new FormData(event.target);
+    fetch(event.target.action, {
+      method: form.method,
+      body: data,
+      headers: {
+          'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        // Redireciona para a sua página de obrigado manualmente
+        window.location.href = "https://peussis.github.io/gaming-localization/thanks.html";
+      } else {
+        alert("Oops! There was a problem submitting your form");
+      }
+    }).catch(error => {
+      alert("Oops! There was a problem submitting your form");
+    });
+  }
+  form.addEventListener("submit", handleSubmit)
+</script>
 </body>
 
 </html>
+
 
 
