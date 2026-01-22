@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Game Localization | EN-PTBR</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #00dc82; /* Verde Esmeralda Moderno */
+            --bg: #0a0a0b;
+            --surface: #141416;
+            --text: #ffffff;
+            --text-dim: #94a3b8;
+        }
+
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: var(--bg); 
+            color: var(--text); 
+            margin: 0; 
+            line-height: 1.6;
+        }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
+
+        /* --- ESTILO DO TOPO COM FOTO (FLEXBOX) --- */
+        header { 
+            padding: 80px 0 60px; 
+        }
+
+        .hero-wrapper {
+            display: flex;
+            align-items: center; /* Centraliza verticalmente */
+            justify-content: space-between; /* Empurra um para cada canto */
+            gap: 40px; /* Espaço entre texto e foto */
+        }
+
+        .hero-text {
+            flex: 1; /* Texto ocupa o espaço disponível */
+            text-align: left;
+        }
+
+        .hero-image img {
+            width: 280px; /* Tamanho da foto */
+            height: 280px;
+            object-fit: cover; /* Garante que a foto não estique */
+            border-radius: 50%; /* Faz o círculo */
+            border: 3px solid var(--primary); /* Borda verde */
+            box-shadow: 0 0 30px rgba(0, 220, 130, 0.2); /* Brilho suave */
+        }
+        
+        .badge {
+            background: rgba(0, 220, 130, 0.1);
+            color: var(--primary);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        h1 { 
+            font-size: 3.5rem; 
+            font-weight: 800; 
+            line-height: 1.1; 
+            margin: 0 0 24px 0; 
+            letter-spacing: -2px; 
+        }
+
+        .hero-sub { 
+            font-size: 1.25rem; 
+            color: var(--text-dim); 
+            max-width: 600px; 
+            margin-bottom: 0; 
+        }
+
+        /* --- GRID DE ESTATÍSTICAS --- */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; margin-bottom: 80px; }
+        
+        .card { 
+            background: var(--surface); 
+            padding: 32px; 
+            border-radius: 16px; 
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: border 0.3s ease;
+        }
+        .card:hover { border-color: var(--primary); }
+        .card h3 { font-size: 1.5rem; margin-top: 0; color: var(--primary); }
+        .card p { color: var(--text-dim); margin-bottom: 0; }
+
+        /* --- FORMULÁRIO --- */
+        .cta-section { 
+            background: var(--surface); 
+            padding: 60px; 
+            border-radius: 24px; 
+            border: 1px solid rgba(255,255,255,0.05);
+            margin-bottom: 100px;
+        }
+
+        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+        label { display: block; font-size: 0.9rem; font-weight: 600; margin-bottom: 8px; color: var(--text-dim); }
+
+        input, select, textarea { 
+            width: 100%; padding: 16px; border-radius: 12px; border: 1px solid #27272a; 
+            background: #0a0a0b; color: white; font-size: 1rem; box-sizing: border-box;
+            font-family: inherit;
+        }
+
+        input:focus, select:focus, textarea:focus { border-color: var(--primary); outline: none; }
+
+        .btn { 
+            background: var(--primary); color: #000; padding: 20px; border: none; 
+            border-radius: 12px; font-weight: 700; font-size: 1.1rem; cursor: pointer;
+            width: 100%; transition: transform 0.2s ease;
+        }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(0, 220, 130, 0.2); }
+
+        /* --- VERSÃO MOBILE --- */
+        @media (max-width: 768px) {
+            .hero-wrapper {
+                flex-direction: column-reverse; /* Foto em cima, texto embaixo no celular */
+                text-align: center;
+                gap: 30px;
+            }
+            .hero-text { text-align: center; }
+            .hero-sub { margin: 0 auto; }
+            h1 { font-size: 2.5rem; }
+            .hero-image img { width: 200px; height: 200px; }
+            .form-grid { grid-template-columns: 1fr; }
+            .cta-section { padding: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="hero-wrapper">
+            
+            <div class="hero-text">
+                <span class="badge">EN > PT-BR Localization</span>
+                <h1>Don't leave the <br>Brazilian market behind.</h1>
+                <p class="hero-sub">Native Portuguese localization focused on increasing your Steam revenue and player engagement in Latin America's largest market.</p>
+            </div>
+
+            <div class="hero-image">
+                <img src="profile.jpg" alt="Pedro Assis Game Translator">
+            </div>
+
+        </div>
+    </header>
+
+    <div class="grid">
+        <div class="card">
+            <h3>90M+ Players</h3>
+            <p>Brazil is the world's 10th largest gaming market. Professional localization is the key to this audience.</p>
+        </div>
+        <div class="card">
+            <h3>Manual Quality</h3>
+            <p>No AI, no shortcuts. Culturally accurate translation that respects your game's lore and tone.</p>
+        </div>
+        <div class="card">
+            <h3>SEO & Store LQA</h3>
+            <p>I optimize your Steam tags and descriptions to help your game rank higher in the Brazilian region.</p>
+        </div>
+    </div>
+
+    <section class="cta-section" id="quote">
+        <h2 style="font-size: 2rem; margin-top: 0;">Get Your Free Quote</h2>
+        <p style="color: var(--text-dim); margin-bottom: 40px;">Includes a 100-word free sample of your actual script.</p>
+
+        <form action="https://formspree.io/f/SEU_EMAIL_AQUI" method="POST">
+            <div class="form-grid">
+                <div>
+                    <label>PROJECT NAME</label>
+                    <input type="text" name="project" placeholder="Game title" required>
+                </div>
+                <div>
+                    <label>GENRE</label>
+                    <select name="genre">
+                        <option value="indie">Indie / Action</option>
+                        <option value="rpg">RPG / Narrative</option>
+                        <option value="strategy">Strategy / Sim</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div style="margin-top: 20px;">
+                <label>APPROXIMATE WORD COUNT</label>
+                <input type="number" name="words" placeholder="e.g. 15000" required>
+            </div>
+
+            <div style="margin-top: 20px;">
+                <label>MESSAGE / STEAM PAGE LINK</label>
+                <textarea name="message" rows="4" placeholder="Tell me about your project..."></textarea>
+            </div>
+
+            <div style="margin-top: 30px;">
+                <button type="submit" class="btn">REQUEST FREE SAMPLE</button>
+            </div>
+        </form>
+    </section>
+</div>
+
+</body>
+</html>
